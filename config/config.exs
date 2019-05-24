@@ -15,7 +15,15 @@ config :strichliste_elixir, StrichlisteElixirWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "btgftTiyJ1b+EVxbkGRw/sIxiFbzB8m0HqpTPBwFeJesXYBp6khzImkQlW0easIL",
   render_errors: [view: StrichlisteElixirWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: StrichlisteElixir.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: StrichlisteElixir.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "TP1bmITU542RA1d7vzkruPkhATh+gLGK"
+  ],
+  live_reload: [
+    patterns: [
+      ~r{lib/strichliste_elixir_web/live/.*(ex)$}
+    ]
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,

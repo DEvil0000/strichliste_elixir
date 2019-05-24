@@ -1,6 +1,8 @@
 defmodule StrichlisteElixirWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :strichliste_elixir
 
+  socket "/live", Phoenix.LiveView.Socket
+
   socket "/socket", StrichlisteElixirWeb.UserSocket,
     websocket: true,
     longpoll: false
