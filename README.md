@@ -14,6 +14,8 @@ docker run --rm -ti --network host \
 
  Install elixir with your package manager
 -------------------------
+***Protipp:*** *Use a rapberry Pi*
+
 ```bash
 apt install elixir erlang-nox
 ```
